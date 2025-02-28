@@ -1,0 +1,287 @@
+.houses {
+    padding: 7rem 20px;
+    padding-bottom: 9rem;
+    background-color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.houses h2 {
+    font-size: 2.5rem;
+    margin: 3rem 0;
+}
+
+.services-container {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    gap: 20px;
+    list-style: none;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 40%;
+
+    max-width: 500px;
+    height: 800px;
+    background-color: #ececec;
+    padding: 10px;
+    border-radius: 18px;
+    text-align: center;
+    border: solid 1px #dddddd;
+    user-select: none;
+    justify-content: space-between;
+}
+
+.service img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px 10px 40px 40px;
+    margin-bottom: 20px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.service p {
+    gap: 10px;
+    color: #666;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    user-select: none;
+}
+
+.service .btn-link {
+    width: 200px;
+    padding: 10px 20px;
+    background-color: #414141;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin: 40px 0;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-family: "Montserrat", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+}
+
+.service .btn-link:hover {
+    background-color: #ececec;
+    scale: 1.048;
+    font-weight: 700;
+    color: #1f1f1f;
+}
+
+.service .btn-link:active {
+    scale: 0.9;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+@media (max-width: 720px) {
+
+    .logo img {
+        height: 35px;
+    }
+
+    header {
+        width: 100% !important;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: rgba(255, 255, 255, 1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 98;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .nav-links li:nth-child(1) {
+        transition: opacity 0.5s ease-in 0.2s;
+    }
+
+    .nav-links li:nth-child(2) {
+        transition: opacity 0.5s ease-in 0.4s;
+    }
+
+    .nav-links li:nth-child(3) {
+        transition: opacity 0.5s ease-in 0.6s;
+    }
+
+    .nav-links li:nth-child(4) {
+        transition: opacity 0.5s ease-in 0.8s;
+    }
+
+    .nav-links.active li {
+        opacity: 1;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .houses {
+        padding: 7rem 2px !important;
+        padding-bottom: 9rem;
+        background-color: #ffffff;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px !important;
+    }
+
+    .houses h2 {
+        font-size: 1.8rem;
+        margin: 1.5rem 1rem;
+    }
+
+    .services-container {
+        display: contents;
+        max-width: 100%;
+        height: 100%;
+        gap: 35px !important;
+        list-style: none;
+        padding: 0px !important;
+    }
+
+    .service {
+        display: flex;
+        align-items: center;
+        margin: 1rem;
+        width: 90% !important;
+        height: 600px;
+        background-color: #ececec;
+        padding: 10px;
+        border-radius: 18px;
+        text-align: center;
+        border: solid 1px #dddddd;
+        user-select: none;
+        justify-content: space-between;
+    }
+
+    .service img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px 10px 40px 40px;
+        margin-bottom: 20px;
+        user-select: none;
+        pointer-events: none;
+    }
+
+    .service h3 {
+        font-size: 1rem;
+        user-select: none;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .service p {
+        gap: 10px;
+        color: #666;
+        font-size: 0.8rem;
+        font-family: "Montserrat", sans-serif;
+        user-select: none;
+        -webkit-line-clamp: 4;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        height: 80px;
+        max-width: 380px;
+        overflow: hidden;
+        content: "...";
+    }
+
+    .service .btn-link {
+        width: 150px;
+        padding: 5px 10px;
+        background-color: #414141;
+        color: #fff;
+        text-transform: uppercase;
+        border-radius: 10px;
+        font-weight: 700;
+        border: none;
+        transition: background-color 0.3s ease;
+        margin: 20px 0;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        font-family: "Montserrat", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        user-select: none;
+    }
+
+
+    .contact {
+        opacity: 0;
+        padding: 60px 20px;
+        background-color: #e2e2e2;
+        text-align: center;
+    }
+
+    .contact h2 {
+        font-size: 1.5rem !important;
+        margin-bottom: 40px;
+    }
+
+    .contact h3 {
+        font-size: 1.2rem !important;
+        margin-top: 50px;
+        font-family: 'Cinzel', serif;
+        font-weight: 700;
+    }
+
+    .contact p {
+        font-size: 0.9rem !important;
+    }
+
+    .contact-container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 20px;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+
+    .contact-container iframe {
+        width: 100%;
+    }
+}

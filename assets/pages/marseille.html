@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS links -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/list.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Title -->
+    <title>AS Conciergerie</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.png">
+</head>
+
+<body>
+    <div id="loading-pages" class="loading-pages">
+        <div>
+            <img id="loading-image1" src="../images/A.png" alt="A">
+        </div>
+        <div>
+            <img id="loading-image2" src="../images/S.png" alt="S">
+        </div>
+    </div>
+    <div class="cursor"></div>
+    <!-- Header with navbar -->
+    <header class="animate__animated animate__slideInDown animate__delay-3s" id="header">
+        <nav>
+            <div class="logo">
+                <a href="../../index.html">
+                    <img src="../images/favicon.png" alt="AS Conciergerie">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href=".././../index.html">Accueil</a></li>
+                <li><a href=".././../index.html#about">A propos</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn" style="cursor: pointer;">Nos Logements</a>
+                    <div class="dropdown-content">
+                        <a href="nimes.html">Nîmes</a>
+                        <a href="#uzes">Uzes</a>
+                        <a href="#montpellier">Montpellier</a>
+                        <a href="#le-grau-du-roi">Le Grau du-Roi</a>
+                        <a href="aixenprovence.html">Aix-en-Provence</a>
+                    </div>
+                </li>
+                <li class="dropdown-small">
+                    <div class="dropdown-content-small">
+                        <a href="nimes.html">Nîmes</a>
+                        <a href="#">Marseille</a>
+                        <a href="#uzes">Uzes</a>
+                        <a href="#montpellier">Montpellier</a>
+                        <a href="#le-grau-du-roi">Le Grau du-Roi</a>
+                        <a href="aixenprovence.html">Aix-en-Provence</a>
+                    </div>
+                </li>
+                <li><a href=".././../index.html#cities">Villes</a></li>
+                <li><a href=".././../index.html#services">Nos services</a></li>
+                <li><a href=".././../index.html#contact">Contactez-nous</a></li>
+            </ul>
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main section -->
+    <main>
+
+        <section id="houses" class="houses">
+            <h2>Nos logements à Marseille</h2>
+            <ul class="services-container" id="marseille-list">
+                <!-- List items will be populated here by JavaScript -->
+            </ul>
+        </section>
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                fetch('../scripts/houseslist.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const marseilleHouses = data.MARSEILLE;
+                        const listContainer = document.getElementById('marseille-list');
+
+                        marseilleHouses.forEach(house => {
+                            const listItem = document.createElement('li');
+                            listItem.classList.add('service');
+                            listItem.innerHTML = `
+                                <img src="${house.image}" alt="${house.title}">
+                                <h3>${house.title}</h3>
+                                <p>${house.description}</p>
+                                <a href="${house.link}" class="btn-link">Voir plus</a>
+                            `;
+                            listContainer.appendChild(listItem);
+                        });
+                    })
+                    .catch(error => console.error('Error loading JSON:', error));
+            });
+        </script>
+
+        <!-- Contact section -->
+        <section id="contact" class="contact">
+            <h2>Contactez-nous pour une estimation offerte !</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p>Adresse: 3 Rue Charbonnaud, 30750 Saint-Mamert-du-Gard</p>
+                    <p>Téléphone: 07 83 51 65 45</p>
+                    <p>Email:
+                        <a href="mailto:asconciergerie30@gmail.com">
+                            asconciergerie30@gmail.com
+                        </a>
+                    </p>
+                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2875.474119426812!2d4.189364157378703!3d43.88744625043265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b43b1f0c170479%3A0xaf2ebadb52167305!2s3%20Rue%20Chardonnaud%2C%2030730%20Saint-Mamert-du-Gard!5e0!3m2!1sfr!2sfr!4v1737233259263!5m2!1sfr!2sfr"
+                    width="600" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <h3>Merci et à très vite !</h3>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2021 AS Conciergerie</p>
+    </footer>
+
+    <!-- JS links -->
+    <script src="../scripts/javascript.js" type="module"></script>
+</body>
+
+</html>
