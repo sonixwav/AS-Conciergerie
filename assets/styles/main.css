@@ -233,7 +233,7 @@ nav ul li a:hover {
 }
 
 .dropdown-small {
-    display: none;
+    display: none !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -773,7 +773,7 @@ footer p {
     }
 
     .dropdown-small {
-        display: block;
+        display: block !important;
         display: flex;
         justify-content: center;
         align-items: center;
