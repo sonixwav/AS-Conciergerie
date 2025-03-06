@@ -6,22 +6,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS links -->
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/list.css">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+    <link rel="stylesheet" href="../assets/styles/list.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- Title -->
     <title>AS Conciergerie</title>
     <!-- Favicon -->
-    <link rel="icon" href="../images/favicon.png">
+    <link rel="icon" href="../assets/images/favicon.png">
 </head>
 
 <body>
     <div id="loading-pages" class="loading-pages">
         <div>
-            <img id="loading-image1" src="../images/A.png" alt="A">
+            <img id="loading-image1" src="../assets/images/A.png" alt="A">
         </div>
         <div>
-            <img id="loading-image2" src="../images/S.png" alt="S">
+            <img id="loading-image2" src="../assets/images/S.png" alt="S">
         </div>
     </div>
     <div class="cursor"></div>
@@ -30,7 +30,7 @@
         <nav>
             <div class="logo">
                 <a href="../../index.html">
-                    <img src="../images/favicon.png" alt="AS Conciergerie">
+                    <img src="../assets/images/favicon.png" alt="AS Conciergerie">
                 </a>
             </div>
             <ul class="nav-links">
@@ -41,18 +41,17 @@
                     <div class="dropdown-content">
                         <a href="nimes.html">Nîmes</a>
                         <a href="#uzes">Uzes</a>
-                        <a href="#montpellier">Montpellier</a>
-                        <a href="#le-grau-du-roi">Le Grau du-Roi</a>
+                        <a href="not-found.html">Montpellier</a>
+                        <a href="not-found.html">Le Grau du-Roi</a>
                         <a href="aixenprovence.html">Aix-en-Provence</a>
                     </div>
                 </li>
                 <li class="dropdown-small">
                     <div class="dropdown-content-small">
                         <a href="nimes.html">Nîmes</a>
-                        <a href="#">Marseille</a>
-                        <a href="#uzes">Uzes</a>
-                        <a href="#montpellier">Montpellier</a>
-                        <a href="#le-grau-du-roi">Le Grau du-Roi</a>
+                        <a href="not-found.html">Uzes</a>
+                        <a href="not-found.html">Montpellier</a>
+                        <a href="not-found.html">Le Grau du-Roi</a>
                         <a href="aixenprovence.html">Aix-en-Provence</a>
                     </div>
                 </li>
@@ -81,7 +80,7 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-                fetch('../scripts/houseslist.json')
+                fetch('../assets/scripts/houseslist.json')
                     .then(response => response.json())
                     .then(data => {
                         const marseilleHouses = data.MARSEILLE;
@@ -127,11 +126,11 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2021 AS Conciergerie</p>
+        <p>&copy; 2024 AS Conciergerie</p>
     </footer>
 
     <!-- JS links -->
-    <script src="../scripts/javascript.js" type="module"></script>
+    <script src="../assets/scripts/javascript.js" type="module"></script>
 </body>
 
 </html>
